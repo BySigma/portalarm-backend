@@ -74,6 +74,7 @@ if DATABASE_URL:
             "PASSWORD": parsed.password,
             "HOST": parsed.hostname,
             "PORT": parsed.port or 5432,
+            "OPTIONS": {"sslmode": "require"},
         }
     }
 else:
